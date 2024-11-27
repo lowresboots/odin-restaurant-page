@@ -1,6 +1,7 @@
 import './styles.css';
 import createHome from './components/home';
 import createMenu from './components/menu';
+import createContact from './components/contact';
 
 const content = document.getElementById('content');
 
@@ -18,7 +19,13 @@ function loadMenu() {
     content.appendChild(createMenu());
 }
 
+function loadContact() {
+    content.innerHTML = '';
+    content.appendChild(createContact());
+}
+
 homeBtn.addEventListener('click', loadHome);
 menuBtn.addEventListener('click', loadMenu);
+contactBtn.addEventListener('click', loadContact);
 
 loadHome();
