@@ -67,3 +67,70 @@ button:hover::after {
     margin: 2rem auto;
     padding: 0 1rem;
 }
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hours {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hours h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hours p {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+}

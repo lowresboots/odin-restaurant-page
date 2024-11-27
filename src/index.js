@@ -1,3 +1,4 @@
 import './styles.css';
+import createHome from './components/home';
 
-console.log('Webpack is working!');
+document.getElementById('content').appendChild(createHome());
