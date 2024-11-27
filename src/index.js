@@ -1,4 +1,5 @@
 import './styles.css';
+import './taco.svg';
 import createHome from './components/home';
 import createMenu from './components/menu';
 import createContact from './components/contact';

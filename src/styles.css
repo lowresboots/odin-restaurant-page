@@ -6,6 +6,10 @@
     --text-color: #333333;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -285,4 +289,55 @@ button:hover::after {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    right: -10%;
+    width: 800px;
+    height: 800px;
+    background-image: url('./taco.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.03;
+    transform: translateY(-50%) rotate(-15deg);
+    pointer-events: none;
+    z-index: -1;
+    filter: invert(19%) sepia(98%) saturate(2219%) hue-rotate(343deg) brightness(87%) contrast(89%);  /* Makes it our theme red */
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 20%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background-image: url('./taco.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.02;
+    transform: translateY(-50%) rotate(165deg);
+    pointer-events: none;
+    z-index: -1;
+    filter: invert(28%) sepia(96%) saturate(1092%) hue-rotate(127deg) brightness(96%) contrast(101%);  /* Makes it our theme green */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
 }
